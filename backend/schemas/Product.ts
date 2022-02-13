@@ -1,4 +1,4 @@
-import { relationship, select, text } from '@keystone-next/fields';
+import { integer, relationship, select, text } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
 // This basically controls what you see in the Keystone UI for the product page
 
@@ -33,5 +33,6 @@ export const Product = list({
         createView: { fieldMode: 'hidden' },
       },
     }),
+    price: integer(),
   },
 });
